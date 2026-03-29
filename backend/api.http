@@ -1,0 +1,77 @@
+
+POST http://localhost:9080/register HTTP/1.1
+content-Type: application/json
+
+{
+  "username": "kamran",
+  "password": "123456",
+  "email": "kamran@gmail.com",
+  "name": "kamran"
+} 
+
+
+###
+
+
+POST http://localhost:9080/login HTTP/1.1
+content-Type: application/json
+
+{
+  "email": "intikhab@gmail.com",
+  "password": "123456"
+} 
+
+###
+
+
+POST http://localhost:9080/login HTTP/1.1
+content-Type: application/json
+
+{
+  "email": "kamran@gmail.com",
+  "password": "123456"
+} 
+
+###
+
+
+
+###
+GET  http://localhost:9080/get_user_and_profile HTTP/1.1
+content-Type: application/json
+
+{
+  "token": "4fc9853b854c8d45eaf3e562ad16a5730233c407a6196083ade82643aab6e965"
+
+}  
+
+###
+
+
+
+POST http://localhost:9080/update_profile_data HTTP/1.1
+content-Type: application/json
+
+{
+
+  "token": "aed3f1ef4f783dfed5672b89d0af111c768e5a86ba2d8e6d666d8e7494e2376a",
+  "bio": "Hey, I am Anita, I am From Delhi, Software Engineer",
+  "currentPost": "CTO",
+  "pastWork": [{
+    "company":"Microsoft",
+    "position":"CTO",
+    "years":"2+"
+  }],
+  "education": [
+    {
+    "school":"IIIT",
+    "degree":"B.tech",
+    "fieldOfStudy":"2015-2019"
+  }
+  ]
+} 
+
+###
+
+
+GET  http://localhost:9080/users/get_all_users HTTP/1.1
